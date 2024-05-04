@@ -1,0 +1,133 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;;
+}
+
+header {
+    background-color: #00b7ff;
+    display: flex;
+    color: #fff;
+    text-align: left;
+
+}
+
+header h1 {
+    margin-left: 50px;
+    color: black;
+    font-style: italic;
+}
+
+.search {
+    margin-left: 100px;
+    padding: 10px 0;
+    width: 800px;
+    border-radius: 10px;
+    outline: none;
+   
+}
+
+.idsearch{
+  height: 30px;
+  width: 800px;
+  margin-left: 20px;
+  margin-top: 12px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.login {
+  background-color: #00b7ff88;
+  overflow: hidden;
+}
+.login a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.button1 {
+  margin-left: 150px;
+}
+
+.cart {
+  background-color: #00b7ff88;
+  overflow: hidden;
+}
+.cart a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.navbar {
+   padding-left: 550px;
+    background-color: #022d57;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .login {
+    float: right;
+  }
+  
+  .cart {
+    float: right;
+  }

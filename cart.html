@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cart.css">
+  <title>Cart</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('header').innerHTML = html);
+  </script>
+
+<h1>Shopping Cart</h1>
+
+<div id="cartItems"></div>
+
+<p>Total Amount: ₹<span id="totalAmount"></span></p>
+
+<script>
+  // Retrieve cart items from local storage
+  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+  // Reference to the element where cart items will be displayed
+  const cartContainer = document.getElementById('cartItems');
+
+  // Function to display cart items
+  function displayCartItems() {
+    // Clear the previous content of the cart container
+    cartContainer.innerHTML = '';
+
+    let totalAmount = 0;
+
+    // Iterate over each item in the cart
+    cartItems.forEach((item, index) => {
+      // Create a new div element to display each item
+      const itemDiv = document.createElement('div');
+      itemDiv.innerHTML = `
+        <p>Product: ${item.productName}</p>
+        <img src="${item.image}" alt="${item.productName}" style="max-width: 100px;">
+        <p>Price: ₹${item.price}</p>
+        <label for="quantity_${index}">Quantity:</label>
+        <input type="number" id="quantity_${index}" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+        <button onclick="removeItem(${index})">Remove</button>
+        <hr>
+      `;
+      // Append the item div to the cart container
+      cartContainer.appendChild(itemDiv);
+
+      // Calculate the total amount for each item
+      totalAmount += item.price * item.quantity;
+    });
+
+    // Display the total amount
+    document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+  }
+
+  // Function to update quantity
+  function updateQuantity(index, quantity) {
+    cartItems[index].quantity = quantity;
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+  }
+
+  // Function to remove item from cart
+  function removeItem(index) {
+    cartItems.splice(index, 1);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+  }
+
+  // Call the function to display cart items when the page loads
+  displayCartItems();
+</script>
+<script>
+    function increaseQuantity(index) {
+  const input = document.getElementById(`quantity_${index}`);
+  input.value++;
+  updateQuantity(index, input.value);
+}
+
+function decreaseQuantity(index) {
+  const input = document.getElementById(`quantity_${index}`);
+  if (input.value > 1) {
+    input.value--;
+    updateQuantity(index, input.value);
+  }
+}
+</script>
+<div id="footer"></div>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => document.getElementById('footer').innerHTML = html);
+        </script>
+        
+        <script src="search.js"></script>
+</body>
+</html>

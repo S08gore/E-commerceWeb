@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Product1.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="header"></div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+  <main class="container">
+ 
+    <!-- Left Column / Product Images -->
+    <div class="left-column">
+      <img data-image="100g" src="https://www.bigbasket.com/media/uploads/p/l/30000337-2_4-amul-malai-paneer.jpg" alt="">
+      <img data-image="200g" src="https://www.bigbasket.com/media/uploads/p/l/30000337-2_4-amul-malai-paneer.jpg" alt="">
+      <img data-image="1Kg" class="active" src="https://www.bigbasket.com/media/uploads/p/l/30000337-2_4-amul-malai-paneer.jpg" alt="">
+    </div>
+    
+    <!-- Right Column / Product Information -->
+    <div class="right-column">
+      <div class="product-description">
+        <h1>Amul Paneer</h1>
+        <p>Whip up delicious paneer recipes whenever the craving strikes with this ready-to-cook malai paneer from one of India's most loved and trusted dairy brand Amul. It's the easiest way to cook paneer and packs in protein and calcium too. So if you're a big paneer fan, make sure you always have it stocked in your refrigerator! This ready-to-cook malai paneer from Amul is similar to cream cottage cheese. It's available diced in 100 grams, 200 grams, 500 grams and 1 kg packaging and block in 200 grams and 1 kg packaging. Amul Malai Paneer has a higher fat content and lower moisture content compared to the loose paneer available in the market. This makes it easy to cook in less time so it's perfect for students and young professionals who don't always have too much time. Go for the diced packet of Amul Malai Paneer if you like to have a sense of uniformity when you're cooking. It has a smooth, soft and uniform texture. Amul Malai Paneer is made from pure and hygienic sources. It has a shelf life of up to six months when stored frozen. This is a vegetarian product.</p>
+      </div>
+  
+      <!-- Product Weight Options -->
+      <div class="product-weight">
+        <span>Weight:</span>
+        <div class="weight-choose">
+          <button data-price="48" data-image="100g">200g</button>
+          <button data-price="95" data-image="200g">400g</button>
+          
+        </div>
+      </div>
+
+  
+     
+      <!-- Product Price and Buttons -->
+      <div class="product-price">
+        <span>₹48</span>
+        <button class="cart-btn">Add to Cart</button>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Get all weight buttons
+    const weightButtons = document.querySelectorAll('.weight-choose button');
+    
+    // Add event listener to each weight button
+    weightButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Get the price and image from the data attributes of the clicked button
+        const price = button.getAttribute('data-price');
+        const image = button.getAttribute('data-image');
+        
+        // Update the product price
+        document.querySelector('.product-price span').textContent = `₹${price}`;
+        
+        // Update the product image
+        const productImages = document.querySelectorAll('.left-column img');
+        productImages.forEach(img => {
+          img.classList.remove('active');
+          if (img.getAttribute('data-image') === image) {
+            img.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Add event listener to Add to Cart button
+    document.querySelector('.cart-btn').addEventListener('click', () => {
+      const quantity = document.getElementById('quantity').value;
+      const price = parseFloat(document.querySelector('.product-price span').textContent.slice(1));
+      const totalPrice = (price * quantity).toFixed(2);
+      alert(`Added to cart: Quantity - ${quantity}, Total Price - ₹${totalPrice}`);
+    });
+
+    // Add event listener to Buy Now button
+    document.querySelector('.buy-btn').addEventListener('click', () => {
+      const quantity = document.getElementById('quantity').value;
+      const price = parseFloat(document.querySelector('.product-price span').textContent.slice(1));
+      const totalPrice = (price * quantity).toFixed(2);
+      alert(`Buy Now: Quantity - ${quantity}, Total Price - ₹${totalPrice}`);
+    });
+  </script>
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+    
+    <script src="search.js"></script>
+</body>
+</html>

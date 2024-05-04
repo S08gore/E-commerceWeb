@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaya Traders - Wholesale Dealer</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body> 
+    <div id="header"></div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+    <script>// Function to filter products based on search input
+        function filterProducts() {
+            let input, filter, sections, products, productName, i, j;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            sections = document.getElementsByClassName("product-section");
+            
+            // Loop through each product section
+            for (i = 0; i < sections.length; i++) {
+                products = sections[i].getElementsByClassName("product");
+                
+                // Loop through each product within the section
+                for (j = 0; j < products.length; j++) {
+                    productName = products[j].getElementsByTagName("h3")[0];
+                    
+                    // If the product name matches the search input, display it, otherwise hide it
+                    if (productName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        products[j].style.display = "";
+                    } else {
+                        products[j].style.display = "none";
+                    }
+                }
+            }
+        }</script>
+    <section id="haldiram" class="product-section">
+        <h2>Haldiram Products</h2>
+        <div class="product">
+            <p><a href="HalkeFulke.html">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40008318_2-haldirams-halke-fulke-salted-potato-chip-crunchy-tasty.jpg" alt="Halke Fulke">
+           </a></p>
+            <h3>Halke Fulke</h3>
+            <p>Price: ₹5 / ₹10</p>
+            <button onclick="addToCart('Halke Fulke', '10')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Takatak.html">
+            <img src="https://tiimg.tistatic.com/fp/1/007/779/delicious-yummy-flavours-masala-salted-haldiram-taka-tak-namkeen-snacks-196.jpg" alt="Taka Tak">
+        </a></p>
+            <h3>Taka Tak</h3>
+            <p>Price: ₹5 / ₹10</p>
+            <button onclick="addToCart('Taka Tak', '10')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="FarariChiwada.html">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/20002973_3-haldirams-namkeen-phalhari-chiwda.jpg" alt="Falhari Chiwda">
+        </a></p>
+            <h3>Falhari Chiwda</h3>
+            <p>Price: ₹5 / ₹10</p>
+            <button onclick="addToCart('Falhari Chiwda', '10')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="ChanaJorGaram.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/c/h/chana_jor_garam-200gm.jpg" alt="Chana jhor">
+        </a></p>
+            <h3>Chana Jhor</h3>
+            <p>Price: ₹40</p>
+            <button onclick="addToCart('Chana Jhor', '40')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="MoongDal.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/m/o/moong_dal_1.jpg" alt="Moong Dal">
+        </a></p>
+            <h3>Moong Dal</h3>
+            <p>Price: ₹55 </p>
+            <button onclick="addToCart('Moong Dal', '55')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="BhujiyaSev.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/b/h/bhujiya_sev_1.jpg" alt="Bhujiya Sev">
+        </a></p>
+            <h3>Bhujiya Sev</h3>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Bhujiya Sev', '55')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AlooBhujiya.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/a/l/aloo_bhujia12344.jpg" alt="Aloo Bhujiya Sev">
+        </a></p>
+            <h3>Aloo Bhujiya Sev</h3>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Aloo Bhujiya Sev', '50')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="MiniBhakarwadi.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/m/i/mini_bhakarwadi_3.jpg" alt="Mini Bhakarwadi">
+        </a></p>
+            <h3>Mini Bhakarwadi</h3>
+            <p>Price: ₹65</p>
+            <button onclick="addToCart('Mini Bhakarwadi', '65')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="SoyaSticks.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/s/o/soya_sticks200_1.png" alt="Soya Sticks">
+        </a></p>
+            <h3>Soya Sticks</h3>
+            <p>Price:₹55</p>
+            <button onclick="addToCart('Soya Sticks', '55')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="InstentBhel.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/i/n/instant_bhel.jpg" alt="Instant Bhel">
+        </a></p>
+            <h3>Instant Bhel</h3>
+            <p>Price: ₹90</p>
+            <button onclick="addToCart('Instant Bhel', '90')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Mixture.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/m/i/mixture.jpg" alt="Mixture">
+        </a></p>
+            <h3>Mixture</h3>
+            <p>Price: ₹45</p>
+            <button onclick="addToCart('Mixture', '45')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Gulabjamun.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/g/j/gj-500g-front-1v1.jpg" alt="Gulab Jamun">
+        </a></p>
+            <h3>Gulab Jamun</h3>
+            <p>Price:₹120 </p>
+            <button onclick="addToCart('Gulab Jamun', '120')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Rusgulla.html">
+            <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/r/a/rasgulla-500g-1-front.jpg" alt="Rasgulla">
+        </a></p>
+            <h3>Rasgulla</h3>
+            <p>Price: ₹118</p>
+            <button onclick="addToCart('Rasgulla', '118')">ADD TO CART</button>
+        </div>
+    </section>
+
+    <section id="amul" class="product-section">
+        <h2>Amul Products</h2>
+        <div class="product">
+            <p><a href="Butter.html">
+            <img src="https://m.media-amazon.com/images/I/51KrxEKN58L.jpg" alt="Butter">
+        </a></p>
+            <h3>Butter</h3>
+            <p>Price: ₹55</p>
+            <button onclick="addToCart('Butter', '55')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AmulCheese.html">
+            <img src="https://m.media-amazon.com/images/I/71sMyqeQGjL.jpg" alt="Cheese">
+        </a></p>
+            <h3>Cheese</h3>
+            <p>Price: ₹285</p>
+            <button onclick="addToCart('Cheese', '285')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AmulPeener.html">
+            <img src="https://www.jiomart.com/images/product/original/490001435/amul-malai-diced-paneer-200-g-pack-product-images-o490001435-p590041247-0-202206061832.jpg?im=Resize=(1000,1000)" alt="Paneer">
+        </a></p>
+            <h3>Paneer</h3>
+            <p>Price: ₹48</p>
+            <button onclick="addToCart('Paneer', '48')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="IceCeream.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSpec6wy5Wa8qz5MdY2DXatCU8F6jZiPg0YZ6hNRpRJQ&s" alt="Icecream">
+        </a></p>
+            <h3>Icecream</h3>
+            <p>Price: ₹195</p>
+            <button onclick="addToCart('Icecream', '195')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AmulChocolate.html">
+            <img src="https://m.media-amazon.com/images/I/61b2Ae0EqML._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Dark Chocolate">
+        </a></p>
+            <h3>Dark Chocolate</h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('Dark Chocolate', '150')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AmulFreshCream.html">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40102603_3-amul-fresh-cream-25-milk-fat-low-fat.jpg" alt="Fresh Cream">
+        </a></p>
+            <h3>Fresh Cream</h3>
+            <p>Price: ₹66</p>
+            <button onclick="addToCart('Fresh Cream', '66')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <P><a href="Amulmithaimaid.html">
+            <img src="https://www.jiomart.com/images/product/original/490983577/amul-mithai-mate-sweetened-condensed-milk-200-g-tin-product-images-o490983577-p490983577-0-202204070409.jpg?im=Resize=(420,420)" alt="Mithai Mate">
+        </a></P>
+            <h3>Mithai Mate</h3>
+            <p>Price: ₹285</p>
+            <button onclick="addToCart('Mithai Mate', '285')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Ghee.html">
+            <img src="https://www.jiomart.com/images/product/original/490001521/amul-pure-ghee-1-l-tin-product-images-o490001521-p490001521-0-202206061807.jpg?im=Resize=(1000,1000)" alt="Ghee">
+        </a></p>
+            <h3>Ghee</h3>
+            <p>Price: ₹285</p>
+            <button onclick="addToCart('Ghee', '285')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="AmulButtermilk.html">
+            <img src="https://m.media-amazon.com/images/I/71WnRjJeV0L.jpg" alt="Buttermilk">
+        </a></p>
+            <h3>Buttermilk</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Buttermilk', '₹')">ADD TO CART</button>
+        </div>
+    </section>
+
+    <section id="nestle" class="product-section">
+        <h2>Nestle Products</h2>
+        <div class="product">
+            <p><a href="Coffee.html">
+            <img src="https://www.nescafe.com/sites/default/files/2020-04/NESCAF%C3%89%20Classic.png" alt="Coffee">
+        </a></p>
+            <h3>Coffee</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Coffee', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Maggie.html">
+            <img src="https://www.nestle.in/sites/g/files/pydnoa451/files/1_newmaggipackshot_inner2017_0.jpg" alt="Maggie">
+        </a></p>
+            <h3>Maggie</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Maggie', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <img src="https://www.nestle.in/sites/g/files/pydnoa451/files/MaggiPacks-270x295-Sauces.jpg" alt="Sauce">
+            <h3>Sauce</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Sauce', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40185401_6-nestle-koko-krunch-breakfast-cereal-chocolate-flavour-small-pack.jpg" alt="Chocs">
+            <h3>Chocs</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Chocs', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <img src="https://fattaak.in/cdn/shop/files/9063418-1687284722358.jpg?v=1704992340" alt="Chocolate Munch">
+            <h3>Chocolate Munch</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Chocolate Munch', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Kitkat.html">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/271675_9-nestle-kitkat-chocolate-wafers-party-pack-2-fingers.jpg" alt="Chocolate Kitkat">
+        </a></p>
+            <h3>Chocolate Kitkat</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Chocolate Kitkat', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="MilkyBar.html">
+            <img src="https://www.jiomart.com/images/product/original/491237725/nestle-milkybar-chocolate-22-5-g-product-images-o491237725-p590110062-0-202402281539.jpg?im=Resize=(1000,1000)" alt="Chocolate Milkybar">
+        </a></p>
+            <h3>Chocolate Milkybar</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Chocolate Milkybar', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="Everyday.html">
+            <img src="https://www.jiomart.com/images/product/original/490191597/nestle-everyday-dairy-whitener-1-kg-pouch-product-images-o490191597-p490191597-0-202203141912.jpg?im=Resize=(1000,1000)" alt="Everyday Milk Powder">
+        </a></p>
+            <h3>Everyday Milk Powder</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Everyday Milk Powder', '₹')">ADD TO CART</button>
+        </div>
+        <div class="product">
+            <p><a href="milkmaid">
+            <img src="https://www.jiomart.com/images/product/original/490001537/nestle-milkmaid-condensed-milk-380-g-tin-product-images-o490001537-p490001537-0-202211151711.jpg?im=Resize=(1000,1000)" alt="Milkmaid">
+        </a></p>
+            <h3>Milkmaid</h3>
+            <p>Price: Varies</p>
+            <button onclick="addToCart('Milkmaid', '₹')">ADD TO CART</button>
+        </div>
+    </section>
+    <script>
+        function addToCart(productName, price) {
+            // Retrieve existing cart items from local storage or initialize an empty array
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            // Create a new item object
+            let newItem = {
+                productName: productName,
+                price: price
+            };
+            
+            // Add the new item to the cart
+            cartItems.push(newItem);
+            
+            // Store the updated cart items back to local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            // Redirect the user to the cart page
+            window.location.href = 'cart.html';
+        }
+        </script>
+
+    <div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+    </body>
+</html>

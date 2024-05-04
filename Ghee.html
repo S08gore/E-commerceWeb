@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Product1.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="header"></div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+  <main class="container">
+ 
+    <!-- Left Column / Product Images -->
+    <div class="left-column">
+      <img data-image="200ml" src="https://indiasdeal.com/wp-content/uploads/2021/10/Amul-Ghee-1-L.jpg" alt="">
+      <img data-image="400ml" src="https://indiasdeal.com/wp-content/uploads/2021/10/Amul-Ghee-1-L.jpg" alt="">
+      <img data-image="1L" class="active" src="https://indiasdeal.com/wp-content/uploads/2021/10/Amul-Ghee-1-L.jpg" alt="">
+    </div>
+    
+    <!-- Right Column / Product Information -->
+    <div class="right-column">
+      <div class="product-description">
+        <h1>Amul Ghee</h1>
+        <p>Amul Ghee has a typical rich aroma and granular texture, which makes any meal delicious. Use it on top of rotis, dal, curry, rice or use it for saute and frying. Amul Ghee is the perfect mixture of taste and health. Add a spoon of Amul Ghee for an active and energetic lifestyle. It is known to improve digestion, Nourish skin and strenthen muscles.</p>
+      </div>
+  
+      <!-- Product Weight Options -->
+      <div class="product-quantity">
+        <span>Quantity:</span>
+        <div class="Quantity-choose">
+
+          <button data-price="260" data-image="1L">1L</button>
+        </div>
+      </div>
+
+  
+     
+      <!-- Product Price and Buttons -->
+      <div class="product-price">
+        <span>₹452</span>
+        <button class="cart-btn">Add to Cart</button>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Get all weight buttons
+    const weightButtons = document.querySelectorAll('.weight-choose button');
+    
+    // Add event listener to each weight button
+    weightButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Get the price and image from the data attributes of the clicked button
+        const price = button.getAttribute('data-price');
+        const image = button.getAttribute('data-image');
+        
+        // Update the product price
+        document.querySelector('.product-price span').textContent = `₹${price}`;
+        
+        // Update the product image
+        const productImages = document.querySelectorAll('.left-column img');
+        productImages.forEach(img => {
+          img.classList.remove('active');
+          if (img.getAttribute('data-image') === image) {
+            img.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Add event listener to Add to Cart button
+    document.querySelector('.cart-btn').addEventListener('click', () => {
+      const quantity = document.getElementById('quantity').value;
+      const price = parseFloat(document.querySelector('.product-price span').textContent.slice(1));
+      const totalPrice = (price * quantity).toFixed(2);
+      alert(`Added to cart: Quantity - ${quantity}, Total Price - ₹${totalPrice}`);
+    });
+
+    // Add event listener to Buy Now button
+    document.querySelector('.buy-btn').addEventListener('click', () => {
+      const quantity = document.getElementById('quantity').value;
+      const price = parseFloat(document.querySelector('.product-price span').textContent.slice(1));
+      const totalPrice = (price * quantity).toFixed(2);
+      alert(`Buy Now: Quantity - ${quantity}, Total Price - ₹${totalPrice}`);
+    });
+  </script>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+    
+    <script src="search.js"></script>
+</body>
+</html>

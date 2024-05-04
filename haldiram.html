@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="haldiram.css">
+    <title>Haldiram Product Catalogue</title>
+</head>
+<body>
+  <div id="header"></div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+  </div>
+        <div id="namkeen" class="section">
+          <h2>Namkeen</h2>
+          <div class="container">
+              <!-- Product cards -->
+              <div class="product">
+                <p> <a href="BhujiyaSev.html">
+               <img src="https://www.haldirams.com/media/catalog/product/cache/71134970afb779eb7860339989626b7e/b/h/bhujiya_sev_1.jpg" alt="Bhujia Sev">
+                </a> </p>
+                <h3>Bhujia Sev</h3>
+                  <p>Price: ₹55 (200gm), ₹105 (400gm), ₹155 (600gm), ₹260 (1kg)</p>
+                  <button onclick="addToCart('Bhujia Sev', '55')">ADD TO CART</button>
+                  <button onclick="buyNow('Bhujia Sev', '55')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p> <a href="MoongDal.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/o/moong_dal_1_1.jpg" alt="Moong Dal">
+                </a></p>
+                  <h3>Moong Dal</h3>
+                  <p>Price: ₹55 (200gm), ₹105 (400gm), ₹260 (1kg)</p>
+                  <button onclick="addToCart('Moong Dal', '55')">ADD TO CART</button>
+                  <button onclick="buyNow('Moong Dal', '55')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="RatalamiSev.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/i/m/img-20220903-wa0002.jpg" alt="Ratalami Sev">
+                </a></p>
+                  <h3>Ratalami Sev</h3>
+                  <p>Price: ₹47 (200gm)</p>
+                  <button onclick="addToCart('Ratalami Sev', '47')">ADD TO CART</button>
+                  <button onclick="buyNow('Ratalami Sev', '47')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="LemonBhel.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/l/e/lemon_bhel_front_200gm.jpg" alt="Lemon Bhel">
+                </a></p>
+                  <h3>Lemon Bhel</h3>
+                  <p>Price: ₹40 (200 gm)</p>
+                  <button onclick="addToCart('Lemon Bhel', '40')">ADD TO CART</button>
+                  <button onclick="buyNow('Lemon Bhel', '40')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="PunjabiTadaka.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/u/punjabi_tadka_front.jpg" alt="Punjabi Tadka">
+                </a></p>
+                  <h3>Punjabi Tadka</h3>
+                  <p>Price: ₹47 (200gm)</p>
+                  <button onclick="addToCart('Punjabi Tadka', '47')">ADD TO CART</button>
+                  <button onclick="buyNow('Punjabi Tadka', '47')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="AlooBhujiya.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/a/l/aloo_bhujia_front_200gm.jpeg" alt="Aloo Bhujia">
+                </a></p>
+                  <h3>Aloo Bhujia</h3>
+                  <p>Price: ₹52 (220gm), ₹90 (400gm), ₹225 (1kg)</p>
+                  <button onclick="addToCart('Aloo Bhujia', '52')">ADD TO CART</button>
+                  <button onclick="buyNow('Aloo Bhujia', '52')">BUY NOW</button>
+              </div>
+              <div class="product">
+                 <p><a href="Boondi.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/k/h/khari_boondi_front_200gm.jpg" alt="Boondi">
+                </a></p>
+                  <h3>Boondi</h3>
+                  <p>Price: ₹52 (200gm)</p>
+                  <button onclick="addToCart('Boondi', '52')">ADD TO CART</button>
+                  <button onclick="buyNow('Boondi', '52')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="LiteChiwada.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/l/i/lite_chiwda_8.jpg" alt="Lite Chiwda">
+                </a></p>
+                  <h3>Lite Chiwda</h3>
+                  <p>Price: ₹40 (200gm)</p>
+                  <button onclick="addToCart('Lite Chiwda', '40')">ADD TO CART</button>
+                  <button onclick="buyNow('Lite Chiwda', '40')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="MiniBhakarwadi.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/i/mini_bhakarwadi_3.jpg" alt="Mini Bhakarwadi">
+                </a></p>
+                  <h3>Mini Bhakarwadi</h3>
+                  <p>Price: ₹65 (200gm)</p>
+                  <button onclick="addToCart('Mini Bhakarwadi', '65')">ADD TO CART</button>
+                  <button onclick="buyNow('Mini Bhakarwadi', '65')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="SoyaSticks.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/s/o/soyastick.jpg" alt="Soya Sticks">
+                </a></p>
+                  <h3>Soya Sticks</h3>
+                  <p>Price: ₹45 (200gm), ₹90 (400gm)</p>
+                  <button onclick="addToCart('Soya Sticks', '45' )">ADD TO CART</button>
+                  <button onclick="buyNow('Soya Sticks', '45')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="InstentBhel.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/i/n/instant_bhel.jpg" alt="Instant Bhel">
+                </a></p>
+                  <h3>Instant Bhel</h3>
+                  <p>Price: ₹90 (400gm)</p>
+                  <button onclick="addToCart('Instant Bhel', '90')">ADD TO CART</button>
+                  <button onclick="buyNow('Instant Bhel', '90')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="ChanaJorGaram.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/h/chana_jor_garam-200gm.jpg" alt="Chana Jor Garam">
+                </a></p>
+                  <h3>Chana Jor Garam</h3>
+                  <p>Price: ₹40 (200gm)</p>
+                  <button onclick="addToCart('Chana Jor Garam', '40')">ADD TO CART</button>
+                  <button onclick="buyNow('Chana Jor Garam', '40')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="Mixture.html">
+                  <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/i/mixture.jpg" alt="Mixture">
+                </a></p>
+                  <h3>Mixture</h3>
+                  <p>Price: ₹45 (200gm), ₹88 (400gm)</p>
+                  <button onclick="addToCart('Mixture', '45')">ADD TO CART</button>
+                  <button onclick="buyNow('Mixture', '45')">BUY NOW</button>
+              </div>
+              <div class="product">
+                <p><a href="HalkeFulke.html">
+                <img src="https://www.bigbasket.com/media/uploads/p/l/40008318_2-haldirams-halke-fulke-salted-potato-chip-crunchy-tasty.jpg" alt="Halke Fulke">
+              </a></p>
+                <h3>Halke Fulke</h3>
+                <p>Price: ₹10</p>
+                <button onclick="addToCart('Mixture', '10')">ADD TO CART</button>
+                <button onclick="buyNow('Mixture', '10')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Takatak.html">
+              <img src="https://tiimg.tistatic.com/fp/1/007/779/delicious-yummy-flavours-masala-salted-haldiram-taka-tak-namkeen-snacks-196.jpg" alt="Taka Tak">
+            </a></p>
+              <h3>Taka Tak</h3>
+              <p>Price: ₹10</p>
+              <button onclick="addToCart('Mixture', '10')">ADD TO CART</button>
+              <button onclick="buyNow('Mixture', '10')">BUY NOW</button>
+          </div>
+              
+          </div>
+      </div>
+  </div>
+ 
+          
+          <div id="sweet" class="section">
+            <h2>Sweets</h2>
+            <div class="container">
+              <div class="product">
+                <p><a href="AgraTajPetha.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/a/g/agar_taj_petha_1.jpg" alt="Agra Taj Petha">
+              </a></p>
+                <h3>Agra Taj Petha</h3>
+                <p>Price: ₹57 (200gm), ₹90 (350gm)</p>
+                <button onclick="addToCart('Agra Taj Petha', '57')">ADD TO CART</button>
+                <button onclick="buyNow('Agra Taj Petha', '57')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="KajuKatali.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/k/a/kaju-katli-250-front.jpg" alt="Kaju Katli">
+              </a></p>
+                <h3>Kaju Katli</h3>
+                <p>Price: ₹258 (250gm), ₹508 (500gm)</p>
+                <button onclick="addToCart('Kaju Katli', '258')">ADD TO CART</button>
+                <button onclick="buyNow('Kaju Katli', '258')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="OrangeBurfee.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/o/r/orange_burfee_2_.jpg" alt="Orange Burfee">
+              </a></p>
+                <h3>Orange Burfee</h3>
+                <p>Price: ₹156 (250gm), ₹313 (500gm)</p>
+                <button onclick="addToCart('Orange Burfee', '156')">ADD TO CART</button>
+                <button onclick="buyNow('Orange Burfee', '156')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Gulabjamun.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/g/j/gj-500g-front-1v1.jpg" alt="Gulab Jamun">
+              </a></p>
+                <h3>Gulab Jamun</h3>
+                <p>Price: ₹120 (500gm), ₹213 (1kg)</p>
+                <button onclick="addToCart('Gulab Jamun', '120')">ADD TO CART</button>
+                <button onclick="buyNow('Gulab Jamun', '120')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <P><a href="Rusgulla.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/r/a/rasgulla_6.jpg" alt="Rasgulla">
+              </a></P>
+                <h3>Rasgulla</h3>
+                <p>Price: ₹118 (500gm), ₹213 (1kg)</p>
+                <button onclick="addToCart('Rasgulla', '118')">ADD TO CART</button>
+                <button onclick="buyNow('Rasgulla', '118')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="SoanPapdi.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/s/o/soan-papdi-250g-frontv1.jpg" alt="Soan Papdi">
+              </a></p>
+                <h3>Soan Papdi - Elaichi Flavor</h3>
+                <p>Price: ₹66 (250gm), ₹123 (500gm)</p>
+                <button onclick="addToCart('Soan Papdi - Elaichi Flavor', '66')">ADD TO CART</button>
+                <button onclick="buyNow('Soan Papdi - Elaichi Flavor', '66')">BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/h/chocolate_soan_papdi-compressor_2.jpg" alt="Soan Papdi - Chocolate Flavor">
+                <h3>Soan Papdi - Chocolate Flavor</h3>
+                <p>Price: ₹71 (250gm)</p>
+                <button onclick="addToCart('Soan Papdi - Chocolate Flavor', '71')">ADD TO CART</button>
+                <button onclick="buyNow('Soan Papdi - Chocolate Flavor', '71')">BUY NOW</button>
+            </div>
+            <div class="product">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/o/coconut_sp.jpg" alt="Soan Papdi - Coconut Flavor">
+                <h3>Soan Papdi - Coconut Flavor</h3>
+                <p>Price: ₹71 (250gm)</p>
+                <button onclick="addToCart('Soan Papdi - Coconut Flavor', '71')">ADD TO CART</button>
+                <button onclick="buyNow('Soan Papdi - Coconut Flavor', '71')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="BesenLadu.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/b/e/besan_ladoo_front.jpg" alt="Besan Ladoo">
+              </a></p>
+                <h3>Besan Ladoo</h3>
+                <p>Price: ₹166 (250gm), ₹323 (500gm)</p>
+                <button onclick="addToCart('Besan Ladoo', '166')">ADD TO CART</button>
+                <button onclick="buyNow('Besan Ladoo', '166')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="RajBhog.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/r/a/rajbhog_1_5.jpg" alt="Rajbhog">
+              </a></p>
+                <h3>Rajbhog</h3>
+                <p>Price: ₹214 (1kg)</p>
+                <button onclick="addToCart('Rajbhog', '214')">ADD TO CART</button>
+                <button onclick="buyNow('Rajbhog', '214')">BUY NOW</button>
+            </div>
+            </div>
+          </div>
+          
+          <div id="cookies" class="section">
+            <h2>Cookies</h2>
+            <div class="container">
+            <div class="product">
+              <p><a href="AttaCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/a/a/aata_cookies_1.jpg" alt="Atta Cookies">
+            </a></p>
+              <h3>Atta Cookies</h3>
+              <p>Price: ₹90 (250gm)</p>
+              <button onclick="addToCart('Atta Cookies', '90')">ADD TO CART</button>
+              <button onclick="buyNow('Atta Cookies', '90')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="JeeraNamkeenCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/j/e/jeera_namkeen_cookies_1.jpg" alt="Jeera Namkeen Cookies">
+            </a></p>
+              <h3>Jeera Namkeen Cookies</h3>
+              <p>Price: ₹75 (250gm)</p>
+              <button onclick="addToCart('Jeera Namkeen Cookies', '75')">ADD TO CART</button>
+              <button onclick="buyNow('Jeera Namkeen Cookies', '75')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="KajuNankhataiCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/k/a/kaju_nankhatai_1_3.jpg" alt="Kaju Nankhatai Cookies">
+            </a></p>
+              <h3>Kaju Nankhatai Cookies</h3>
+              <p>Price: ₹110 (250gm)</p>
+              <button onclick="addToCart('Kaju Nankhatai Cookies', '110')">ADD TO CART</button>
+              <button onclick="buyNow('Kaju Nankhatai Cookies', '110')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="GourasCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/g/o/gorus_cookies_2.jpg" alt="Gorus Cookies">
+            </a></p>
+              <h3>Gorus Cookies</h3>
+              <p>Price: ₹110 (250gm)</p>
+              <button onclick="addToCart('Gorus Cookies', '110')">ADD TO CART</button>
+              <button onclick="buyNow('Gorus Cookies', '110')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="PistaBadamCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/i/pista_badam_cookies_1.jpg" alt="Pista Badam Cookies">
+            </a></p>
+              <h3>Pista Badam Cookies</h3>
+              <p>Price: ₹90 (200gm)</p>
+              <button onclick="addToCart('Pista Badam Cookies', '90')">ADD TO CART</button>
+              <button onclick="buyNow('Pista Badam Cookies', '90')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="Chocochipcookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/h/chocolate_chip.jpg" alt="Chocolate Chip Cookies">
+            </a></p>
+              <h3>Chocolate Chip Cookies</h3>
+              <p>Price: ₹100 (250gm)</p>
+              <button onclick="addToCart('Chocolate Chip Cookies', '100')">ADD TO CART</button>
+              <button onclick="buyNow('Chocolate Chip Cookies', '100')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="FruitCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/f/r/fruit_biscuits.jpg" alt="Fruit Cookies">
+            </a></p>
+              <h3>Fruit Cookies</h3>
+              <p>Price: ₹100 (250gm)</p>
+              <button onclick="addToCart('Fruit Cookies', '100')">ADD TO CART</button>
+              <button onclick="buyNow('Fruit Cookies', '100')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="kajuButterCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/k/a/kaju_butter_3_4.jpg" alt="Kaju Butter Cookies">
+            </a></p>
+              <h3>Kaju Butter Cookies</h3>
+              <p>Price: ₹90 (250gm)</p>
+              <button onclick="addToCart('Kaju Butter Cookies', '90')">ADD TO CART</button>
+              <button onclick="buyNow('Kaju Butter Cookies', '90')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <p><a href="CocunutCookies.html">
+              <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/o/coconut_cookies.jpg" alt="Coconut Cookies">
+            </a></p>
+              <h3>Coconut Cookies</h3>
+              <p>Price: ₹90 (250gm)</p>
+              <button onclick="addToCart('Coconut Cookies', '90')">ADD TO CART</button>
+              <button onclick="buyNow('Coconut Cookies', '90')">BUY NOW</button>
+          </div>
+           </div>
+          </div>
+          
+          <div id="beverage" class="section">
+            <h2>Beverages</h2>
+            <div class="container">
+              <div class="product">
+                <p><a href="KeserMilk.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/k/e/kesar_milk.jpg" alt="Thanda Funda - Kesar Milk">
+              </a></p>
+                <h3>Thanda Funda - Kesar Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - Kesar Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - Kesar Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="KeserMilk.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/c/h/chocolate_milk.jpg" alt="Thanda Funda - Chocolate Milk">
+              </a></p>
+                <h3>Thanda Funda - Chocolate Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - Chocolate Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - Chocolate Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Rosemilk.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/r/o/rose_milk.jpg" alt="Thanda Funda - Rose Flavoured Milk">
+              </a></p>
+                <h3>Thanda Funda - Rose Flavoured Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - Rose Flavoured Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - Rose Flavoured Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Strwaberry.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/s/t/strawberry_milk.jpg" alt="Thanda Funda - Strawberry Flavoured Milk">
+              </a></p>
+                <h3>Thanda Funda - Strawberry Flavoured Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - Strawberry Flavoured Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - Strawberry Flavoured Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Frenchvenilllamilk.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/f/r/french_vanilla.jpg" alt="Thanda Funda - French Vanilla Milk">
+              </a></p>
+                <h3>Thanda Funda - French Vanilla Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - French Vanilla Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - French Vanilla Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Butterschochmilk.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/b/u/butter_scotch__1.jpg" alt="Thanda Funda - Butter Scotch Flavoured Milk">
+              </a></p>
+                <h3>Thanda Funda - Butter Scotch Flavoured Milk</h3>
+                <p>Price: ₹228 (180ml - pack of 12)</p>
+                <button onclick="addToCart('Thanda Funda - Butter Scotch Flavoured Milk', '228')">ADD TO CART</button>
+                <button onclick="buyNow('Thanda Funda - Butter Scotch Flavoured Milk', '228')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Mangodrink.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/2/_/2_4_6.jpg" alt="Mango Drink">
+              </a></p>
+                <h3>Mango Drink</h3>
+                <p>Price: ₹190 (125ml - pack of 20)</p>
+                <button onclick="addToCart('Mango Drink', '190')">ADD TO CART</button>
+                <button onclick="buyNow('Mango Drink', '190')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Mangolassi.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/a/mango_lassi.jpg" alt="Mango Lassi">
+              </a></p>
+                <h3>Mango Lassi</h3>
+                <p>Price: ₹356 (180ml - pack of 15)</p>
+                <button onclick="addToCart('Mango Lassi', '356')">ADD TO CART</button>
+                <button onclick="buyNow('Mango Lassi', '356')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="classiclassi.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/l/a/lassi_6.jpg" alt="Classic Lassi">
+              </a></p>
+                <h3>Classic Lassi</h3>
+                <p>Price: ₹285 (180ml - pack of 15)</p>
+                <button onclick="addToCart('Classic Lassi', '285')">ADD TO CART</button>
+                <button onclick="buyNow('Classic Lassi', '285')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="matkajhataka.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/a/matka_jhatka.jpg" alt="Matka Jhatka Chaas">
+              </a></p>
+                <h3>Matka Jhatka Chaas</h3>
+                <p>Price: ₹214 (180ml - pack of 15)</p>
+                <button onclick="addToCart('Matka Jhatka Chaas', '214')">ADD TO CART</button>
+                <button onclick="buyNow('Matka Jhatka Chaas', '214')">BUY NOW</button>
+            </div>
+            </div>
+          </div>
+          
+          <div id="ready" class="section">
+            <h2>Ready to eat</h2>
+            <div class="container">
+              <div class="product">
+                <p><a href="dalmakhani.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/1/_/1_dal_makhani_chawal.jpg" alt="Dal Makhani Chawal">
+              </a></p>
+                <h3>Dal Makhani Chawal</h3>
+                <p>Price: ₹142 (350gms)</p>
+                <button onclick="addToCart('Dal Makhani Chawal', '142')">ADD TO CART</button>
+                <button onclick="buyNow('Dal Makhani Chawal', '142')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Choley Chawal.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/1/_/1_choley_chawal.jpg" alt="Choley Chawal">
+              </a></p>
+                <h3>Choley Chawal</h3>
+                <p>Price: ₹142 (350gms)</p>
+                <button onclick="addToCart('Choley Chawal', '142')">ADD TO CART</button>
+                <button onclick="buyNow('Choley Chawal', '142')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Rajmachawal.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/1/_/1_rajma_chawal.jpg" alt="Rajma Chawal">
+              </a></p>
+                <h3>Rajma Chawal</h3>
+                <p>Price: ₹142 (350gms)</p>
+                <button onclick="addToCart('Rajma Chawal', '142')">ADD TO CART</button>
+                <button onclick="buyNow('Rajma Chawal', '142')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Dalchawaljeerarice.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/1/_/1_dal_tadka_chawal.jpg" alt="Dal Tadka With Jeeera Rice">
+              </a></p>
+                <h3>Dal Tadka With Jeeera Rice</h3>
+                <p>Price: ₹142 (350gms)</p>
+                <button onclick="addToCart('Dal Tadka With Jeeera Rice', '142')">ADD TO CART</button>
+                <button onclick="buyNow('Dal Tadka With Jeeera Rice', '142')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="mutterpaneer.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/m/a/matar_paneer_1.jpg" alt="Mutter Paneer">
+              </a></p>
+                <h3>Mutter Paneer</h3>
+                <p>Price: ₹128 (300gms)</p>
+                <button onclick="addToCart('Mutter Paneer', '128')">ADD TO CART</button>
+                <button onclick="buyNow('Mutter Paneer', '128')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Palakpneer.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/a/palak_paneer_1.jpg" alt="Palak Paneer">
+              </a></p>
+                <h3>Palak Paneer</h3>
+                <p>Price: ₹128 (300gms)</p>
+                <button onclick="addToCart('Palak Paneer', '128')">ADD TO CART</button>
+                <button onclick="buyNow('Palak Paneer', '128')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="paneerbuttermasala.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/a/paneer_tikka_masala_1.jpg" alt="Paneer Tikka Masala">
+              </a></p>
+                <h3>Paneer Tikka Masala</h3>
+                <p>Price: ₹128 (300gms)</p>
+                <button onclick="addToCart('Paneer Tikka Masala', '128')">ADD TO CART</button>
+                <button onclick="buyNow('Paneer Tikka Masala', '128')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Paneermakhani.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/a/paneer_makhani_1.jpg" alt="Paneer Makhani">
+              </a></p>
+                <h3>Paneer Makhani</h3>
+                <p>Price: ₹128 (300gms)</p>
+                <button onclick="addToCart('Paneer Makhani', '128')">ADD TO CART</button>
+                <button onclick="buyNow('Paneer Makhani', '128')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="rajmaraseela.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/r/a/rajma_raseela.jpg" alt="Rajma Raseela">
+              </a></p>
+                <h3>Rajma Raseela</h3>
+                <p>Price: ₹94 (300gms)</p>
+                <button onclick="addToCart('Rajma Raseela', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Rajma Raseela', '94')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="dalmakhani.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/d/a/dal_makhani_1.jpg" alt="Dal Makhani">
+              </a></p>
+                <h3>Dal Makhani</h3>
+                <p>Price: ₹104 (300gms)</p>
+                <button onclick="addToCart('Dal Makhani', '104')">ADD TO CART</button>
+                <button onclick="buyNow('Dal Makhani', '104')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="pavbhaji.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/a/pav_bhaji_1.jpg" alt="Pav Bhaji">
+              </a></p>
+                <h3>Pav Bhaji</h3>
+                <p>Price: ₹94 (300gms)</p>
+                <button onclick="addToCart('Pav Bhaji', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Pav Bhaji', '94')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Dumbiriyani.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/d/u/dum_biryani_1.jpg" alt="Dum Biryani">
+              </a></p>
+                <h3>Dum Biryani</h3>
+                <p>Price: ₹94 (200gms)</p>
+                <button onclick="addToCart('Dum Biryani', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Dum Biryani', '94')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="punjabikadhipakoda.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/u/punjabi_kadhi_pakoda_1_1.jpg" alt="Punjabi Kadhi Pakoda">
+              </a></p>
+                <h3>Punjabi Kadhi Pakoda</h3>
+                <p>Price: ₹94 (300gms)</p>
+                <button onclick="addToCart('Punjabi Kadhi Pakoda', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Punjabi Kadhi Pakoda', '94')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="punjabichole.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/p/u/punjabi_choley_1.jpg" alt="Punjabi Choley">
+              </a></p>
+                <h3>Punjabi Choley</h3>
+                <p>Price: ₹94 (300gms)</p>
+                <button onclick="addToCart('Punjabi Choley', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Punjabi Choley', '94')">BUY NOW</button>
+            </div>
+            <div class="product">
+              <p><a href="Daltadaka.html">
+                <img src="https://www.haldirams.com/media/catalog/product/cache/91c328e4e467a384bb2dca2d478e6436/d/a/dal_tadka_1.jpg" alt="Dal Tadka">
+              </a></p>
+                <h3>Dal Tadka</h3>
+                <p>Price: ₹94 (300gms)</p>
+                <button onclick="addToCart('Dal Tadka', '94')">ADD TO CART</button>
+                <button onclick="buyNow('Dal Tadka', '94')">BUY NOW</button>
+            </div>
+            </div>
+          </div>
+        
+        <script>
+          // Function to proceed to buy product
+          function buyNow(productName, price) {
+              alert('Proceeding to buy ' + productName + '. Price: ₹' + price);
+              
+          }
+      </script>
+      <script>
+        function addToCart(productName, price) {
+          // Retrieve existing cart items from local storage or initialize an empty array
+          alert('Added ' + productName + ' to cart. Price: ₹' + price);
+          let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+          // Create a new item object
+          let newItem = {
+            productName: productName,
+            price: price
+          };
+    
+          // Add the new item to the cart
+          cartItems.push(newItem);
+    
+          // Store the updated cart items back to local storage
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+          // Optionally, you can redirect the user to the cart page
+          window.location.href = 'cart.html';
+        }
+    
+       // function buyNow(productName, price) {
+          // Similar logic as addToCart function
+         // addToCart(productName, price);
+       // }
+      </script>
+      <div id="footer"></div>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => document.getElementById('footer').innerHTML = html);
+        </script>
+        <script src="search.js"></script>        
+        </body>      
+</html>

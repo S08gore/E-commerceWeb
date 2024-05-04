@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="haldiram.css">
+    <title>Amul Product Catalogue</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('header').innerHTML = html);
+  </script>
+    
+    <div id="Dairy Product" class="section">
+        <h2>Dairy Products</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/1202759-2_2-amul-butter-pasteurized.jpg" alt="Butter">
+            <h3>Butter</h3>
+            <p>Price: ₹58 (100gm), ₹114 (200gm), ₹275 (500gm)</p>
+            <button onclick="addToCart('Butter', '58')">ADD TO CART</button>
+            <button onclick="buyNow('Butter', '58')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/70001832_2-amul-taaza-fresh-toned-milk.jpg" alt="Amul Taaza Fresh Toned Milk">
+            <h3>Amul Taaza Fresh Toned Milk</h3>
+            <p>Price: ₹180 (200ml Pack of 12), ₹37 (500ml), ₹71 (1L)</p>
+            <button onclick="addToCart('Amul Taaza Fresh Toned Milk', '180')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Taaza Fresh Toned Milk', '180')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/1200002-2_1-amul-masti-buttermilk-spice.jpg" alt="Amul Masti Buttermilk">
+            <h3>Amul Masti Buttermilk</h3>
+            <p>Price: ₹84 (200ml Pack of 6), ₹70 (1L)</p>
+            <button onclick="addToCart('Amul Masti Buttermilk', '84')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Masti Buttermilk', '84')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/229136-2_2-amul-cheese-slices.jpg" alt="Cheese Slices">
+            <h3>Cheese Slices</h3>
+            <p>Price: ₹80 (100gm), ₹140 (200gm), ₹266 (400gm), ₹409 (750gm)</p>
+            <button onclick="addToCart('Cheese Slices', '80')">ADD TO CART</button>
+            <button onclick="buyNow('Cheese Slices', '80')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/279588-2_4-amul-malai-paneer.jpg" alt="Malai Paneer">
+            <h3>Malai Paneer</h3>
+            <p>Price: ₹44 (100gm), ₹95 (200gm)</p>
+            <button onclick="addToCart('Malai Paneer', '44')">ADD TO CART</button>
+            <button onclick="buyNow('Malai Paneer', '44')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/m/40102603_3-amul-fresh-cream-25-milk-fat-low-fat.jpg?tr=w-1920,q=80" alt="Fresh Cream">
+            <h3>Fresh Cream</h3>
+            <p>Price: ₹63 (250ml), ₹220 (1L)</p>
+            <button onclick="addToCart('Fresh Cream', '63')">ADD TO CART</button>
+            <button onclick="buyNow('Fresh Cream', '63')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40191706-2_2-amul-diced-cheese-blend.jpg" alt="Pizza Cheese Diced - Mozzarella & Cheddar Blend">
+            <h3>Pizza Cheese Diced - Mozzarella & Cheddar Blend</h3>
+            <p>Price: ₹122 (200gm), ₹550 (1kg)</p>
+            <button onclick="addToCart('Pizza Cheese Diced', '122')">ADD TO CART</button>
+            <button onclick="buyNow('Pizza Cheese Diced', '122')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/m/40087510_2-amul-masti-dahi.jpg?tr=w-1920,q=80" alt="Masti Dahi">
+            <h3>Masti Dahi</h3>
+            <p>Price: ₹10 (85gm), ₹20 (200gm), ₹182 (2kg)</p>
+            <button onclick="addToCart('Masti Dahi', '10')">ADD TO CART</button>
+            <button onclick="buyNow('Masti Dahi', '10')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40013013_2-amul-lassi-rose-flavor.jpg" alt="Lassi">
+            <h3>Lassi</h3>
+            <p>Price: ₹18 (200ml)</p>
+            <button onclick="addToCart('Lassi', '18')">ADD TO CART</button>
+            <button onclick="buyNow('Lassi', '18')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/70001829-2_1-amul-mithai-mate-sweetened-condensed-milk.jpg" alt="Mithai Mate">
+            <h3>Mithai Mate</h3>
+            <p>Price: ₹62 (200gm), ₹126 (400gm)</p>
+            <button onclick="addToCart('Mithai Mate', '62')">ADD TO CART</button>
+            <button onclick="buyNow('Mithai Mate', '62')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40046232_4-amul-amul-ghee-5-l.jpg" alt="Ghee">
+            <h3>Ghee</h3>
+            <p>Price: ₹330 (500ml), ₹650 (1L), ₹3130 (5L)</p>
+            <button onclick="addToCart('Ghee', '330')">ADD TO CART</button>
+            <button onclick="buyNow('Ghee', '330')">BUY NOW</button>
+        </div>
+        </div>
+      </div>
+      
+      <div id="Ice Cream" class="section">
+        <h2>Ice Cream</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://onionz.in/uploads/items/88ff1c7baa8c10b8d8059438e168271b.jpg" alt="Amul Mango Ice Cream">
+            <h3>Amul Mango Ice Cream</h3>
+            <p>Pack Size: 500ml</p>
+            <p>Price: ₹140</p>
+            <button onclick="addToCart('Amul Mango Ice Cream', '140')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Mango Ice Cream', '140')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://dukaan.b-cdn.net/700x700/webp/269633/fdf8f50a-7141-48b6-b815-add428b2675e.png" alt="Amul Kesar Pista Ice Cream">
+            <h3>Amul Kesar Pista Ice Cream</h3>
+            <p>Pack Size: 750ml</p>
+            <p>Price: ₹170</p>
+            <button onclick="addToCart('Amul Kesar Pista Ice Cream', '170')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Kesar Pista Ice Cream', '170')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40012978_7-amul-ice-cream-caramel-cookies.jpg" alt="Amul Caramel Crunch Ice Cream">
+            <h3>Amul Caramel Crunch Ice Cream</h3>
+            <p>Pack Size: 1 liter</p>
+            <p>Price: ₹210</p>
+            <button onclick="addToCart('Amul Caramel Crunch Ice Cream', '210')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Caramel Crunch Ice Cream', '210')">BUY NOW</button>
+        </div>
+    </div>
+</div>
+      
+      <div id="Chocolate" class="section">
+        <h2>Chocolate</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81EAqP0D0+L.jpg" alt="Amul Dark Chocolate">
+            <h3>Amul Dark Chocolate</h3>
+            <p>Pack Size: 150gm</p>
+            <p>Price: ₹100</p>
+            <button onclick="addToCart('Amul Dark Chocolate', '100')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Dark Chocolate', '100')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81Rz8SxtiJL.jpg" alt="Amul Milk Chocolate">
+            <h3>Amul Milk Chocolate</h3>
+            <p>Pack Size: 100gm</p>
+            <p>Price: ₹80</p>
+            <button onclick="addToCart('Amul Milk Chocolate', '80')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Milk Chocolate', '80')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81lJPzUIIcL.jpg" alt="Amul Fruit & Nut Chocolate">
+            <h3>Amul Fruit & Nut Chocolate</h3>
+            <p>Pack Size: 200gm</p>
+            <p>Price: ₹120</p>
+            <button onclick="addToCart('Amul Fruit & Nut Chocolate', '120')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Fruit & Nut Chocolate', '120')">BUY NOW</button>
+        </div>
+    </div>
+</div>
+        </div>
+      </div>
+      
+      <div id="Protien" class="section">
+        <h2>Protien</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://www.jiomart.com/images/product/original/491165115/amul-pro-chocolate-500-g-product-images-o491165115-p491165115-0-202203150033.jpg?im=Resize=(420,420)" alt="Amul Pro Whey Protein Powder">
+            <h3>Amul Pro Whey Protein Powder</h3>
+            <p>Pack Size: 500gm</p>
+            <p>Price: ₹800</p>
+            <button onclick="addToCart('Amul Pro Whey Protein Powder', '800')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Pro Whey Protein Powder', '800')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40018682_4-amul-pro-whey-protein-malt-chocolate.jpg" alt="Amul Pro Health & Wellness Protein Drink">
+            <h3>Amul Pro Health & Wellness Protein Drink</h3>
+            <p>Pack Size: 200ml (Pack of 6)</p>
+            <p>Price: ₹300</p>
+            <button onclick="addToCart('Amul Pro Health & Wellness Protein Drink', '300')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Pro Health & Wellness Protein Drink', '300')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61P1FpHq1eL.jpg" alt="Amul Pro Junior Protein Supplement">
+            <h3>Amul Pro Junior Protein Supplement</h3>
+            <p>Pack Size: 400gm</p>
+            <p>Price: ₹500</p>
+            <button onclick="addToCart('Amul Pro Junior Protein Supplement', '500')">ADD TO CART</button>
+            <button onclick="buyNow('Amul Pro Junior Protein Supplement', '500')">BUY NOW</button>
+        </div>
+    </div>
+</div>
+      <script>
+      // Function to proceed to buy product
+        function buyNow(productName, price) {
+            alert('Proceeding to buy ' + productName + '. Price: ₹' + price);
+        }
+    </script>
+    <script>
+      function addToCart(productName, price) {
+        // Retrieve existing cart items from local storage or initialize an empty array
+        alert('Added ' + productName + ' to cart. Price: ₹' + price);
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+        // Create a new item object
+        let newItem = {
+          productName: productName,
+          price: price
+        };
+  
+        // Add the new item to the cart
+        cartItems.push(newItem);
+  
+        // Store the updated cart items back to local storage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+        // Optionally, you can redirect the user to the cart page
+        window.location.href = 'cart.html';
+      }
+  
+      //function buyNow(productName, price) {
+        // Similar logic as addToCart function
+      //  addToCart(productName, price);
+     // }
+    </script>
+      <div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+  
+  <script src="search.js"></script>
+</body>
+</html>

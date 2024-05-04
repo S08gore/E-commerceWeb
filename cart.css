@@ -1,0 +1,72 @@
+
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+  }
+
+  #cartItems {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .product {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .product img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .product p {
+    margin: 0;
+  }
+  
+  .product label {
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  button {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: red;
+  }
+
+  #totalAmount {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+  }
+
+
+
+
+
+
+

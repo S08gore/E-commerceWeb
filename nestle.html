@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="haldiram.css">
+  <title>Nestle Product Catalogue</title>
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => document.getElementById('header').innerHTML = html);
+  </script>
+      <div id="Maggie" class="section">
+        <h2>Maggie</h2>
+        <div class="container">
+            <div class="product">
+              <img src="https://m.media-amazon.com/images/I/71T0QfFl+3L._AC_UF1000,1000_QL80_.jpg" alt="Maggi 2-Minute Noodles Masala">
+              <h3>Maggi 2-Minute Noodles Masala</h3>
+              <p>Pack Size: 70gm</p>
+              <p>Price: ₹12 </p>
+              <button onclick="addToCart('Maggi Noodles', '12')">ADD TO CART</button>
+              <button onclick="buyNow('Maggi Noodles', '12')">BUY NOW</button>
+          </div>
+          <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/xxl/40237235_3-maggi-2-minute-instant-noodles-veggie-masala-made-with-quality-spices-rich-in-fibre.jpg" alt="Maggi 2-Minute Noodles Vegetable">
+            <h3>Maggi 2-Minute Noodles Vegetable</h3>
+            <p>Pack Size: 70gm</p>
+            <p>Price: ₹14</p>
+            <button onclick="addToCart('Maggi 2-Minute Noodles Vegetable', '14')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi 2-Minute Noodles Vegetable', '14')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81Lm78bTrML.jpg" alt="Maggi Masala Magic Cubes">
+            <h3>Maggi Masala Magic Cubes</h3>
+            <p>Pack Size: 12 Cubes</p>
+            <p>Price: ₹30</p>
+            <button onclick="addToCart('Maggi Masala Magic Cubes', '30')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Masala Magic Cubes', '30')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61Y51v4rRoL.jpg" alt="Maggi Hot & Sweet Tomato Chili Sauce">
+            <h3>Maggi Hot & Sweet Tomato Chili Sauce</h3>
+            <p>Pack Size: 200gm</p>
+            <p>Price: ₹35</p>
+            <button onclick="addToCart('Maggi Hot & Sweet Tomato Chili Sauce', '35')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Hot & Sweet Tomato Chili Sauce', '35')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.maggi.in/sites/default/files/styles/product_image_tab_landscape_384_768/public/maggi-masala-oats.png?itok=HOzpl59p" alt="Maggi Nutri-licious Masala Oats">
+            <h3>Maggi Nutri-licious Masala Oats</h3>
+            <p>Pack Size: 40gm</p>
+            <p>Price: ₹20</p>
+            <button onclick="addToCart('Maggi Nutri-licious Masala Oats', '20')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Nutri-licious Masala Oats', '20')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61pYfbia0aL.jpg" alt="Maggi Rich Tomato Ketchup">
+            <h3>Maggi Rich Tomato Ketchup</h3>
+            <p>Pack Size: 500gm</p>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Maggi Rich Tomato Ketchup', '50')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Rich Tomato Ketchup', '50')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40020213_2-maggi-coconut-milk-powder.jpg" alt="Maggi Coconut Milk Powder">
+            <h3>Maggi Coconut Milk Powder</h3>
+            <p>Pack Size: 100gm</p>
+            <p>Price: ₹45</p>
+            <button onclick="addToCart('Maggi Coconut Milk Powder', '45')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Coconut Milk Powder', '45')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.jiomart.com/images/product/original/491439723/maggi-pazzta-cheese-macaroni-family-saver-pack-150-g-product-images-o491439723-p491439723-0-202306040903.jpg?im=Resize=(1000,1000)" alt="Maggi Pazzta Cheese Macaroni">
+            <h3>Maggi Pazzta Cheese Macaroni</h3>
+            <p>Pack Size: 64gm</p>
+            <p>Price: ₹25</p>
+            <button onclick="addToCart('Maggi Pazzta Cheese Macaroni', '25')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Pazzta Cheese Macaroni', '25')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/276414_1-maggi-healthy-soups-sweet-corn-vegetable.jpg" alt="Maggi Healthy Soups - Mixed Vegetable">
+            <h3>Maggi Healthy Soups - Mixed Vegetable</h3>
+            <p>Pack Size: 53gm</p>
+            <p>Price: ₹30</p>
+            <button onclick="addToCart('Maggi Healthy Soups - Mixed Vegetable', '30')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Healthy Soups - Mixed Vegetable', '30')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81u3p4g++XL._AC_UF1000,1000_QL80_.jpg" alt="Maggi Pazzta Masala Penne">
+            <h3>Maggi Pazzta Masala Penne</h3>
+            <p>Pack Size: 65gm</p>
+            <p>Price: ₹25</p>
+            <button onclick="addToCart('Maggi Pazzta Masala Penne', '25')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Pazzta Masala Penne', '25')">BUY NOW</button>
+        </div>
+    </div>
+</div>
+      
+      <div id="Coffee" class="section">
+        <h2>Coffee</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71KO+B2m5wL.jpg" alt="Nescafe Classic Coffee">
+            <h3>Nescafe Classic Coffee</h3>
+            <p>Pack Size: 50gm</p>
+            <p>Price: ₹100</p>
+            <button onclick="addToCart('Nescafe Classic Coffee', '100')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Classic Coffee', '100')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51GKb3dBopL.jpg" alt="Nescafe Gold Blend">
+            <h3>Nescafe Gold Blend</h3>
+            <p>Pack Size: 100gm</p>
+            <p>Price: ₹250</p>
+            <button onclick="addToCart('Nescafe Gold Blend', '250')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Gold Blend', '250')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71jVBwIn4KL.jpg" alt="Nescafe Sunrise Instant Coffee">
+            <h3>Nescafe Sunrise Instant Coffee</h3>
+            <p>Pack Size: 200gm</p>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('Nescafe Sunrise Instant Coffee', '150')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Sunrise Instant Coffee', '150')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/819QaPMLg2L.jpg" alt="Nescafe Cappuccino Instant Coffee Mix">
+            <h3>Nescafe Cappuccino Instant Coffee Mix</h3>
+            <p>Pack Size: 100gm</p>
+            <p>Price: ₹120</p>
+            <button onclick="addToCart('Nescafe Cappuccino Instant Coffee Mix', '120')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Cappuccino Instant Coffee Mix', '120')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81uMThCzasL._AC_.jpg" alt="Nescafe Creamy Latte Instant Coffee">
+            <h3>Nescafe Creamy Latte Instant Coffee</h3>
+            <p>Pack Size: 200gm</p>
+            <p>Price: ₹180</p>
+            <button onclick="addToCart('Nescafe Creamy Latte Instant Coffee', '180')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Creamy Latte Instant Coffee', '180')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://images-cdn.ubuy.co.in/6351b7c3396e8365a224af85-nescafe-clasico-decaf-instant-coffee.jpg" alt="Nescafe Decaf Instant Coffee">
+            <h3>Nescafe Decaf Instant Coffee</h3>
+            <p>Pack Size: 50gm</p>
+            <p>Price: ₹120</p>
+            <button onclick="addToCart('Nescafe Decaf Instant Coffee', '120')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Decaf Instant Coffee', '120')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/kgsb1jk0/coffee/e/4/d/75-classic-coffee-sachets-50-pcs-sachet-instant-coffee-nescafe-original-imafwy7zxmz99mhx.jpeg?q=90&crop=false" alt="Nescafe Classic Coffee Sachets">
+            <h3>Nescafe Classic Coffee Sachets</h3>
+            <p>Pack Size: 10 Sachets</p>
+            <p>Price: ₹50</p>
+            <button onclick="addToCart('Nescafe Classic Coffee Sachets', '50')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Classic Coffee Sachets', '50')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61Qtl9L-w1L.jpg" alt="Nescafe Gold Blend Rich & Smooth">
+            <h3>Nescafe Gold Blend Rich & Smooth</h3>
+            <p>Pack Size: 200gm</p>
+            <p>Price: ₹300</p>
+            <button onclick="addToCart('Nescafe Gold Blend Rich & Smooth', '300')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Gold Blend Rich & Smooth', '300')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/241695_14-nescafe-sunrise-rich-aroma-instant-coffee-chicory-mix.jpg" alt="Nescafe Sunrise Rich Aroma">
+            <h3>Nescafe Sunrise Rich Aroma</h3>
+            <p>Pack Size: 500gm</p>
+            <p>Price: ₹400</p>
+            <button onclick="addToCart('Nescafe Sunrise Rich Aroma', '400')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe Sunrise Rich Aroma', '400')">BUY NOW</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71CFvPyHCCL.jpg" alt="Nescafe 3 in 1 Instant Coffee Premix">
+            <h3>Nescafe 3 in 1 Instant Coffee Premix</h3>
+            <p>Pack Size: 25 Sachets</p>
+            <p>Price: ₹627</p>
+            <button onclick="addToCart('Nescafe 3 in 1 Instant Coffee Premix', '70')">ADD TO CART</button>
+            <button onclick="buyNow('Nescafe 3 in 1 Instant Coffee Premix', '70')">BUY NOW</button>
+        </div>
+    </div>
+</div>
+
+      <div id="Chocolate" class="section">
+        <h2>Chocolate</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://www.bigbasket.com/media/uploads/p/l/271675_9-nestle-kitkat-chocolate-wafers-party-pack-2-fingers.jpg" alt="KitKat">
+            <h3>KitKat</h3>
+            <p>Price: ₹10 (10gm), ₹25 (25gm), ₹50 (50gm)</p>
+            <button onclick="addToCart('KitKat', '10')">ADD TO CART</button>
+            <button onclick="buyNow('KitKat', '10')">BUY NOW</button>
+        </div>
+        <div class="product">
+          <img src="https://www.jiomart.com/images/product/original/491237725/nestle-milkybar-chocolate-22-5-g-product-images-o491237725-p590110062-0-202402281539.jpg?im=Resize=(1000,1000)" alt="Milkybar">
+          <h3>Milkybar</h3>
+          <p>Price: ₹10 (10gm), ₹25 (25gm), ₹50 (50gm)</p>
+          <button onclick="addToCart('Milkybar', '10')">ADD TO CART</button>
+          <button onclick="buyNow('Milkybar', '10')">BUY NOW</button>
+      </div>
+      <div class="product">
+        <img src="https://www.kroger.com/product/images/large/front/0002800054678" alt="Nestle Crunch">
+        <h3>Nestle Crunch</h3>
+        <p>Price: ₹20 (25gm), ₹40 (50gm)</p>
+        <button onclick="addToCart('Nestle Crunch', '20')">ADD TO CART</button>
+        <button onclick="buyNow('Nestle Crunch', '20')">BUY NOW</button>
+    </div>
+    <div class="product">
+      <img src="https://fattaak.in/cdn/shop/files/9063418-1687284722358.jpg?v=1704992340" alt="Chocolate Munch">
+      <h3>Nestle Crunch</h3>
+      <p>Price: ₹10 (20gm)</p>
+      <button onclick="addToCart('Chocolate Munch', '10')">ADD TO CART</button>
+      <button onclick="buyNow('Chocolate Munch', '10')">BUY NOW</button>
+  </div>
+        </div>
+      </div>
+      
+      <div id="Beverages" class="section">
+        <h2>Beverages</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://images-cdn.ubuy.co.in/634e2ac31786c0475352ba2b-nestle-nesquick-chocolate-flavored.jpg" alt="Nesquik Chocolate Milk Powder">
+            <h3>Nesquik Chocolate Milk Powder</h3>
+            <p>Price: ₹150 (200gm), ₹300 (400gm)</p>
+            <button onclick="addToCart('Nesquik Chocolate Milk Powder', '150')">ADD TO CART</button>
+            <button onclick="buyNow('Nesquik Chocolate Milk Powder', '150')">BUY NOW</button>
+        </div>
+        <div class="product">
+          <img src="https://m.media-amazon.com/images/I/71PU9MgX8AL.jpg" alt="Nestea Iced Tea">
+          <h3>Nestea Iced Tea</h3>
+          <p>Price: ₹100 (400gm), ₹250 (1kg)</p>
+          <button onclick="addToCart('Nestea Iced Tea', '100')">ADD TO CART</button>
+          <button onclick="buyNow('Nestea Iced Tea', '100')">BUY NOW</button>
+      </div>
+        </div>
+      </div>
+      
+      <div id="Sauce" class="section">
+        <h2>Sauce</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71vz6jZoaBL.jpg" alt="Maggi Hot & Sweet Tomato Chili Sauce">
+            <h3>Maggi Hot & Sweet Tomato Chili Sauce</h3>
+            <p>Price: ₹50 (200gm), ₹120 (500gm)</p>
+            <button onclick="addToCart('Maggi Hot & Sweet Tomato Chili Sauce', '50')">ADD TO CART</button>
+            <button onclick="buyNow('Maggi Hot & Sweet Tomato Chili Sauce', '50')">BUY NOW</button>
+        </div>
+        <div class="product">
+          <img src="https://m.media-amazon.com/images/I/61pYfbia0aL.jpg" alt="Nestle Tomato Ketchup">
+          <h3>Nestle Tomato Ketchup</h3>
+          <p>Price: ₹40 (200gm), ₹100 (500gm)</p>
+          <button onclick="addToCart('Nestle Tomato Ketchup', '40')">ADD TO CART</button>
+          <button onclick="buyNow('Nestle Tomato Ketchup', '40')">BUY NOW</button>
+      </div>
+        </div>
+      </div>
+      
+      <div id="Dairy Product" class="section">
+        <h2>Dairy Product</h2>
+        <div class="container">
+          <div class="product">
+            <img src="https://www.jiomart.com/images/product/original/490191597/nestle-everyday-dairy-whitener-1-kg-pouch-product-images-o490191597-p490191597-0-202203141912.jpg?im=Resize=(1000,1000)" alt="Nestle Everyday Dairy Whitener">
+            <h3>Nestle Everyday Dairy Whitener</h3>
+            <p>Price: ₹150 (400gm), ₹380 (1kg)</p>
+            <button onclick="addToCart('Nestle Everyday Dairy Whitener', '150')">ADD TO CART</button>
+            <button onclick="buyNow('Nestle Everyday Dairy Whitener', '150')">BUY NOW</button>
+        </div>
+        <div class="product">
+          <img src="https://www.jiomart.com/images/product/original/490001537/nestle-milkmaid-condensed-milk-380-g-tin-product-images-o490001537-p490001537-0-202211151711.jpg?im=Resize=(1000,1000)" alt="Milkmaid">
+          <h3>Milkmaid</h3>
+          <p>Price: ₹259 (400gm)</p>
+          <button onclick="addToCart('Milkmaid', '259')">ADD TO CART</button>
+          <button onclick="buyNow('Milkmaid', '259')">BUY NOW</button>
+      </div>
+        </div>
+      </div>
+ <script>
+    
+        // Function to proceed to buy product
+        function buyNow(productName, price) {
+            alert('Proceeding to buy ' + productName + '. Price: ₹' + price);
+        }
+    </script>  
+    <script>
+      function addToCart(productName, price) {
+        // Retrieve existing cart items from local storage or initialize an empty array
+        alert('Added ' + productName + ' to cart. Price: ₹' + price);
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+        // Create a new item object
+        let newItem = {
+          productName: productName,
+          price: price
+        };
+  
+        // Add the new item to the cart
+        cartItems.push(newItem);
+  
+        // Store the updated cart items back to local storage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+        // Optionally, you can redirect the user to the cart page
+        window.location.href = 'cart.html';
+      }
+  
+      //function buyNow(productName, price) {
+        // Similar logic as addToCart function
+       // addToCart(productName, price);
+     // }
+    </script>
+      <div id="footer"></div>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => document.getElementById('footer').innerHTML = html);
+        </script>
+        
+        <script src="search.js"></script>
+      </body>
+      </html>
+    
